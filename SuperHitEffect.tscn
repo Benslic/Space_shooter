@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://resources/sfx_exp_medium7.wav" type="AudioStream" id=1]
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0.0347222, 0.0555556, 0.0833333, 1 )
+colors = PoolColorArray( 0.152778, 0.0119358, 0.0119358, 1, 0.0470085, 0.00367254, 0.00367254, 1, 0.922363, 0.631328, 0.0828686, 1, 1, 0.078125, 0.078125, 1 )
+
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=1]
+lifetime_randomness = 0.74
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 50, 0 )
+initial_velocity = 100.0
+initial_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color_ramp = SubResource( 4 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Hit"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Particles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+
+[node name="SuperHitEffect" type="Node2D"]
+
+[node name="Particles2D" type="Particles2D" parent="."]
+scale = Vector2( 2, 2 )
+emitting = false
+amount = 60
+lifetime = 1.2
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -9.0
+autoplay = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Hit"
+anims/Hit = SubResource( 2 )

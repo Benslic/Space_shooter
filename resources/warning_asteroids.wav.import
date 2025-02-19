@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/warning_asteroids.wav-92f1b79c585af1dcfd963d8ae698d3e5.sample"
+
+[deps]
+
+source_file="res://resources/warning_asteroids.wav"
+dest_files=[ "res://.import/warning_asteroids.wav-92f1b79c585af1dcfd963d8ae698d3e5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

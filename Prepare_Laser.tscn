@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0.00645161, 0.948387, 0.980645, 1 )
+colors = PoolColorArray( 0.976563, 0.0228882, 0.0228882, 1, 0.99863, 0.942896, 0.942896, 1, 0.997421, 0.934295, 0.892485, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+lifetime_randomness = 0.4
+trail_divisor = 4
+flag_disable_z = true
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 30.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color_ramp = SubResource( 2 )
+
+[node name="Prepare_Laser" type="Particles2D"]
+rotation = -1.5708
+scale = Vector2( 1, 5.5 )
+amount = 30
+lifetime = 0.7
+process_material = SubResource( 3 )
+
+[node name="warning_sound" type="AudioStreamPlayer2D" parent="."]

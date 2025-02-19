@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/zvuki-klaviatury-elektricheskoj-pechatnoj-mashinki.mp3-9c702e68a31d772dce687b62ebdbbad0.mp3str"
+
+[deps]
+
+source_file="res://resources/zvuki-klaviatury-elektricheskoj-pechatnoj-mashinki.mp3"
+dest_files=[ "res://.import/zvuki-klaviatury-elektricheskoj-pechatnoj-mashinki.mp3-9c702e68a31d772dce687b62ebdbbad0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

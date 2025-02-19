@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="ParticlesMaterial" id=1]
+emission_shape = 2
+emission_box_extents = Vector3( 1, 1, 1 )
+flag_disable_z = true
+spread = 20.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = -100.0
+initial_velocity_random = 0.63
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+
+[node name="Stars_from_loon" type="Particles2D"]
+amount = 180
+lifetime = 11.0
+preprocess = 9.0
+speed_scale = 1.15
+explosiveness = 0.1
+process_material = SubResource( 1 )

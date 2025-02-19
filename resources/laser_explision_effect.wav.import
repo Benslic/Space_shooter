@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/laser_explision_effect.wav-af60249a6d28c5d0fed3cd7251abe159.sample"
+
+[deps]
+
+source_file="res://resources/laser_explision_effect.wav"
+dest_files=[ "res://.import/laser_explision_effect.wav-af60249a6d28c5d0fed3cd7251abe159.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

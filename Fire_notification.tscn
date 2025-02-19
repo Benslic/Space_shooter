@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=2]
+
+[sub_resource type="Gradient" id=6]
+offsets = PoolRealArray( 0, 0.503226, 0.516129 )
+colors = PoolColorArray( 0.890625, 0.18205, 0.0661011, 1, 0.242188, 1, 0, 1, 0.42918, 1, 0.246753, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 6 )
+
+[sub_resource type="Curve" id=3]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.100503, 0.684685 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=4]
+curve = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 10.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 50.0
+initial_velocity_random = 0.4
+angular_velocity = 720.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 100.0
+linear_accel_random = 1.0
+radial_accel = 100.0
+angle = 360.0
+angle_random = 1.0
+scale = 0.5
+scale_curve = SubResource( 4 )
+color_ramp = SubResource( 2 )
+
+[node name="Check_Fire" type="Node2D"]
+__meta__ = {
+"_editor_description_": "works as a notifier before fireballs"
+}
+
+[node name="Particles2D" type="Particles2D" parent="."]
+rotation = -1.5708
+scale = Vector2( 2, 2 )
+emitting = false
+amount = 300
+lifetime = 0.4
+process_material = SubResource( 5 )

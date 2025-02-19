@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="ParticlesMaterial" id=1]
+flag_disable_z = true
+spread = 52.63
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = -30.0
+initial_velocity_random = 0.61
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color = Color( 0, 1, 0.905882, 1 )
+
+[node name="Win_particle" type="Particles2D"]
+position = Vector2( 320, 90 )
+amount = 20
+lifetime = 20.0
+process_material = SubResource( 1 )

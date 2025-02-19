@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/boss_main_theme.mp3-414b639198c198c658461cf1f2a7979e.mp3str"
+
+[deps]
+
+source_file="res://resources/Loons_boss/boss_main_theme.mp3"
+dest_files=[ "res://.import/boss_main_theme.mp3-414b639198c198c658461cf1f2a7979e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

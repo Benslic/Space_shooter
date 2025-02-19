@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://resources/Loons_boss/laser_beam_warning.wav" type="AudioStream" id=1]
+[ext_resource path="res://Laser_spawner.gd" type="Script" id=2]
+[ext_resource path="res://resources/Loons_boss/laser_beam_attack.wav" type="AudioStream" id=3]
+[ext_resource path="res://resources/Loons_boss/beam_loop.wav" type="AudioStream" id=4]
+
+[node name="Laser_spawner" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="SpawnPoints" type="Node2D" parent="."]
+
+[node name="Position2D1" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 16, 180 )
+
+[node name="Position2D2" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 48, 180 )
+
+[node name="Position2D3" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 80, 180 )
+
+[node name="Position2D4" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 112, 180 )
+
+[node name="Position2D5" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 144, 180 )
+
+[node name="Position2D6" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 176, 180 )
+
+[node name="Position2D7" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 208, 180 )
+
+[node name="Position2D8" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 240, 180 )
+
+[node name="prepare_timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Warning_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -11.0
+
+[node name="attack_timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Attack_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -15.0
+
+[node name="Attack_sound_loop_timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Attack_loop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -15.0
+
+[node name="Next_attack" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="prepare_timer" to="." method="_on_prepare_timer_timeout"]
+[connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]
+[connection signal="timeout" from="Attack_sound_loop_timer" to="." method="_on_Attack_sound_loop_timer_timeout"]
+[connection signal="timeout" from="Next_attack" to="." method="_on_Next_attack_timeout"]

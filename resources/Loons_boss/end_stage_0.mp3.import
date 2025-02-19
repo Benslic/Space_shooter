@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/end_stage_0.mp3-a64c4eb44042216c0f5c48726613df0e.mp3str"
+
+[deps]
+
+source_file="res://resources/Loons_boss/end_stage_0.mp3"
+dest_files=[ "res://.import/end_stage_0.mp3-a64c4eb44042216c0f5c48726613df0e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

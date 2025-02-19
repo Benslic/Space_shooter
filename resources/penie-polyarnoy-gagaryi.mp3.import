@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/penie-polyarnoy-gagaryi.mp3-88a0b6b760b3c12c7ce6fb867684bfb0.mp3str"
+
+[deps]
+
+source_file="res://resources/penie-polyarnoy-gagaryi.mp3"
+dest_files=[ "res://.import/penie-polyarnoy-gagaryi.mp3-88a0b6b760b3c12c7ce6fb867684bfb0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

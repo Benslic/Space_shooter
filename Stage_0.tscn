@@ -1,0 +1,223 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://resources/Loons_boss/0_stage.png" type="Texture" id=1]
+[ext_resource path="res://Stars_from_loon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Stage_0.gd" type="Script" id=3]
+[ext_resource path="res://resources/Loons_boss/end_stage_0.mp3" type="AudioStream" id=4]
+[ext_resource path="res://resources/Queen Of Drangleic (8-bit Arrangement).mp3" type="AudioStream" id=5]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("0Stage:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("0Stage:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 378, 84 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "enter"
+length = 12.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4, 5, 6, 8, 11, 12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 446, 84 ), Vector2( 392, 84 ), Vector2( 378, 84 ), Vector2( 364, 84 ), Vector2( 350, 84 ), Vector2( 300, 84 ), Vector2( 260, 84 ), Vector2( 250, 84 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 2, 4, 5, 6, 8, 11, 12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "final"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2.3, 5, 7.1, 10, 12.8, 14, 15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 259, 84 ), Vector2( 188, 105 ), Vector2( 125, 109 ), Vector2( 105, 71 ), Vector2( 253, 94 ), Vector2( 68, 80 ), Vector2( 255, 71 ), Vector2( 248, 91 ), Vector2( 250, 84 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "first_attack"
+length = 13.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5, 3, 5, 6, 7.5, 8.5, 10, 12, 13 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 250, 84 ), Vector2( 250, 56 ), Vector2( 222, 32 ), Vector2( 143, 48 ), Vector2( 167, 66 ), Vector2( 133, 25 ), Vector2( 193, 77 ), Vector2( 242, 79 ), Vector2( 215, 101 ), Vector2( 259, 84 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 250, 84 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "idle"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 4.9, 6.1, 7.1, 9.4, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 250, 84 ), Vector2( 250, 61 ), Vector2( 251, 86 ), Vector2( 251, 106 ), Vector2( 251, 128 ), Vector2( 250, 147 ), Vector2( 250, 123 ), Vector2( 250, 104 ), Vector2( 252, 92 ), Vector2( 250, 84 ) ]
+}
+
+[node name="Stage_0" type="Area2D" groups=["boss_area"]]
+position = Vector2( 378, 84 )
+gravity_vec = Vector2( 0, 0 )
+gravity = 0.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="0Stage" type="Sprite" parent="."]
+scale = Vector2( 0.165734, 0.165734 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="Collision" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -68, 18, -46, 7, -35, 3, -12, 1, 6, 1, 19, 5, 18, -3, 20, -11, 24, -18, 30, -23, 38, -24, 48, -21, 53, -19, 67, -20, 51, -14, 39, -4, 37, 6, 42, 21, 41, 24, -26, 24, -49, 22, -67, 20 )
+disabled = true
+
+[node name="Stars_from_loon" parent="." instance=ExtResource( 2 )]
+position = Vector2( -29, 5 )
+amount = 80
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.2
+
+[node name="Stars_from_loon2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -22, 14 )
+amount = 80
+preprocess = 0.0
+speed_scale = 1.0
+
+[node name="Stars_from_loon3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -10, 7 )
+amount = 100
+preprocess = 0.0
+speed_scale = 1.0
+
+[node name="Stars_from_loon5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 7, 14 )
+amount = 100
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.2
+
+[node name="Stars_from_loon4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3, 3 )
+amount = 80
+preprocess = 0.0
+speed_scale = 1.0
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+autoplay = "enter"
+anims/RESET = SubResource( 1 )
+anims/enter = SubResource( 2 )
+anims/final = SubResource( 4 )
+anims/first_attack = SubResource( 3 )
+
+[node name="idleAnimation" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 6 )
+anims/idle = SubResource( 5 )
+
+[node name="end_stage_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+volume_db = 5.0
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[connection signal="body_entered" from="." to="." method="_on_Stage_0_body_entered"]
+[connection signal="animation_finished" from="Animation" to="." method="_on_Animation_animation_finished"]
+[connection signal="animation_finished" from="idleAnimation" to="." method="_on_idleAnimation_animation_finished"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Queen Of Drangleic (8-bit Arrangement).mp3-029525374094c67ae920157d6875c3de.mp3str"
+
+[deps]
+
+source_file="res://resources/Queen Of Drangleic (8-bit Arrangement).mp3"
+dest_files=[ "res://.import/Queen Of Drangleic (8-bit Arrangement).mp3-029525374094c67ae920157d6875c3de.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
